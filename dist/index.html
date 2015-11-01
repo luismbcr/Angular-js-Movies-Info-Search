@@ -1,0 +1,22 @@
+ <!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>App with API</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="styles/main.min.css">
+</head>
+<body ng-app="movies" ng-controller="movieController">
+<div ng-include="'partials/menu.html'"></div>
+<div class="main" >	
+  <p>Search a Movie: <input type="text" ng-model="search" ng-change="change()"></p>
+  
+  <div ng-include="'partials/main-info.html'"></div>
+  
+</div>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script src="scripts/main.js"></script>
+</body>
+</html> 
+
