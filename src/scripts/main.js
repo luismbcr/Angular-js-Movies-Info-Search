@@ -1,3 +1,4 @@
+var apiURL = 'http://www.omdbapi.com/';
 var app = angular.module('movies', [])
 .controller('movieController', function($scope, $http) {
 	var timing;
@@ -20,12 +21,12 @@ var app = angular.module('movies', [])
     }
     
     function fetch(){
-    	$http.get("http://www.omdbapi.com/?t="+ $scope.search +"&tomatoes=true&plot=full")
+    	$http.get(apiURL+"?t="+ $scope.search +"&tomatoes=true&plot=full")
     	.success(function(response){
     		$scope.details =  response;
     	});
 
-        $http.get("http://www.omdbapi.com/?s="+$scope.search)
+        $http.get(apiURL+"?s="+$scope.search)
         .success(function(response){
             $scope.related = response;
         });

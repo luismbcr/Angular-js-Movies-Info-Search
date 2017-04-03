@@ -1,22 +1,42 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-US">
 <head>
-	<title>App with API</title>
+	<title>Movie Info Search tool</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="styles/main.min.css">
 </head>
 <body ng-app="movies" ng-controller="movieController">
-<div ng-include="'partials/menu.html'"></div>
-<div class="main" >	
-  <p>Search a Movie: <input type="text" ng-model="search" ng-change="change()"></p>
-  
-  <div ng-include="'partials/main-info.html'"></div>
-  
-</div>
+	<div ng-include="'partials/menu.html'"></div>
+	<div class="main" >	
+		<form  ng-submit="change()">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-md-offset-1">
+						<div id="search-input">
+							<div class="input-group col-md-12">
+								
+									<input type="text" ng-model="search" class="form-control input-lg" placeholder="Search Movie" />
+									<span class="input-group-btn">
+										<button class="btn btn-info btn-lg" ng-click="change()" type="button">
+											<i class="glyphicon glyphicon-search"></i>
+										</button>
+									</span>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+		<div ng-include="'partials/main-info.html'"></div>
+	
+	</div>
 
 
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-<script src="scripts/main.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="scripts/main.js"></script>
 </body>
 </html> 
 
