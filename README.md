@@ -1,15 +1,17 @@
-# Angular-with-Movies-API-Example
-  Using Angular with Movies API
 
- <h2>Instalation</h2>
-  <p>First you need gulp: <br>
-   <code>sudo npm install gulp </code><br>
-  After, Update Dependencies:<br>
-  <code>npm install</code>
-  </p>
+## Angular JS movie Info search tool ##
 
-  <h2>Usage</h2>
+Project that uses Angularjs and the 
+[OMDb API](http://www.omdbapi.com/)to consume movie information.
 
-   <code>sudo gulp</code><br>
+**Installation** 
 
-  </p>
+Run next scripts:
+
+    npm install
+
+    npm start
+    
+**API Documentation**
+
+[OMDb API](http://www.omdbapi.com/)
